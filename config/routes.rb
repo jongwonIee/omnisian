@@ -1,13 +1,12 @@
 Rails.application.routes.draw do
-  get 'users/new'
 
-  get 'sessions/new'
+  resources :orders
 
-  get 'orders/index'
+  get '/download' => 'products#download'
+  resources :products do
+    collection { post :import}
+  end
 
-  get 'orders/show'
+  root to: 'orders#index'
 
-  get 'orders/new'
-
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
