@@ -18,8 +18,19 @@ ActiveRecord::Schema.define(version: 20170815102800) do
   end
 
   create_table "products", force: :cascade do |t|
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.string   "name"
+    t.string   "date"
+    t.string   "title"
+    t.string   "content"
+    t.string   "username"
+    t.integer  "index"
+    t.string   "category"
+    t.integer  "reply_count"
+    t.integer  "view_count"
+    t.integer  "like_count"
+    t.string   "link"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
   end
 
   create_table "users", force: :cascade do |t|
