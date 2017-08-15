@@ -1,7 +1,17 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup).
-#
-# Examples:
-#
-#   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
-#   Character.create(name: 'Luke', movie: movies.first)
+puts "Inserting products data.."
+File.read("db/seed_data/products.csv").split("\n").each do |line|
+  data = line.strip.split(",")
+  Product.create(
+      id: data[0],
+      name: data[1],
+      title: data[2],
+      content: data[3],
+      username: data[4],
+      index: data[5],
+      category: data[6],
+      reply_count: data[7],
+      view_count: data[8],
+      like_count: data[9],
+      link: data[10]
+  )
+end
