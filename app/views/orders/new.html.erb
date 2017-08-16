@@ -4,20 +4,20 @@
 <div>
   <%= form_for @order do |f| %>
       <%= f.label 'free trial' %>
-      <%= f.radio_button :length, value: 'free' %>
+      <%= f.radio_button :length, 1 %>
       <%= f.label '1 month' %>
-      <%= f.radio_button :length, value: '1 month' %>
+      <%= f.radio_button :length, 2 %>
       <%= f.label '3 month' %>
-      <%= f.radio_button :length, value: '3 month' %>
+      <%= f.radio_button :length, 3 %>
       <%= f.label '6 month' %>
-      <%= f.radio_button :length, value: '6 month' %>
+      <%= f.radio_button :length, 4 %>
       <br>
       <%= f.label 'navercafe' %>
-      <%= f.check_box :target, value: 'navercafe' %>
+      <%= f.check_box :navercafe %>
       <%= f.label 'dcinside' %>
-      <%= f.check_box :target, value: 'dcinside'%>
+      <%= f.check_box :dcinside %>
       <%= f.label 'twitter' %>
-      <%= f.check_box :target, value: 'twitter' %>
+      <%= f.check_box :twitter %>
       <br>
       <%= f.label 'keyword' %>
       <%= f.text_area :keyword, rows: 1 %>

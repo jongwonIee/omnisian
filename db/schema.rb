@@ -13,8 +13,11 @@
 ActiveRecord::Schema.define(version: 20170815102800) do
 
   create_table "orders", force: :cascade do |t|
+    t.integer  "user_id"
     t.integer  "length"
-    t.string   "target"
+    t.boolean  "navercafe"
+    t.boolean  "dcinside"
+    t.boolean  "twitter"
     t.string   "keyword"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false

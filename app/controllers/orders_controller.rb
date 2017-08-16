@@ -13,12 +13,14 @@ class OrdersController < ApplicationController
     order = Order.new(order_params)
     order.user = current_user
     order.save
+
+    redirect_to users_path
   end
 
   private
 
   def order_params
-    params.require(:order).permit(:user_id, :length, :target, :keyword)
+    params.require(:order).permit(:user_id, :length, :navercafe, :dcinside, :twitter, :keyword)
   end
 
 end
