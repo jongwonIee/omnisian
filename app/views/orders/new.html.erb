@@ -1,2 +1,28 @@
 <h1>Orders#new</h1>
 <p>Find me in app/views/orders/new.html.erb</p>
+
+<div>
+  <%= form_for @order do |f| %>
+      <%= f.label 'free trial' %>
+      <%= f.radio_button :length, value: 'free' %>
+      <%= f.label '1 month' %>
+      <%= f.radio_button :length, value: '1 month' %>
+      <%= f.label '3 month' %>
+      <%= f.radio_button :length, value: '3 month' %>
+      <%= f.label '6 month' %>
+      <%= f.radio_button :length, value: '6 month' %>
+      <br>
+      <%= f.label 'navercafe' %>
+      <%= f.check_box :target, value: 'navercafe' %>
+      <%= f.label 'dcinside' %>
+      <%= f.check_box :target, value: 'dcinside'%>
+      <%= f.label 'twitter' %>
+      <%= f.check_box :target, value: 'twitter' %>
+      <br>
+      <%= f.label 'keyword' %>
+      <%= f.text_area :keyword, rows: 1 %>
+      <br>
+      <%= f.submit ("submit") %>
+      </div>
+  <% end %>
+</div>
