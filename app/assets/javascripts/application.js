@@ -12,4 +12,6 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require particles.min.js
+//= require index.js
 //= require_tree .
