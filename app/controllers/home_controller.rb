@@ -5,6 +5,6 @@ class HomeController < ApplicationController
 
   def upload
     img = params[:img]
-    
+
   end
 end

@@ -1,6 +1,7 @@
 class Order < ApplicationRecord
   belongs_to :user
   has_many :products
+  has_many :images
 
   # for updating, downloading csv
   def self.to_csv(options = {})
