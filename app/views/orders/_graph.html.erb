@@ -4,22 +4,7 @@
 <script src="//cdnjs.cloudflare.com/ajax/libs/morris.js/0.5.1/morris.min.js"></script>
 
 <%= content_tag :div, '', id: 'products_chart', data: {products: @products} %>
-
-<table id="products">
-  <tr>
-    <th>date</th>
-    <th>title</th>
-    <th>content</th>
-  </tr>
-  <% @products.each do |product| %>
-      <tr>
-        <td><%= product.date %></td>
-        <td><%= product.title %></td>
-        <td><%= product.content %></td>
-        <td><%= product.content %></td>
-      </tr>
-  <% end %>
-</table>
+<%= content_tag :div, '', id: 'todays_keyword' %>
 
 <script>
   new Morris.Line({
@@ -29,13 +14,33 @@
     // the chart.
     data: $('#products_chart').data('products'),
     // The name of the data record attribute that contains x-values.
-    xkey: ['released_on'],
+    xkey: ['date'],
     // A list of names of data record attributes that contain y-values.
-    ykeys: ['fweek', 'expectation', 'percent_error', 'preview'],
+    ykeys: ['view_count'],
     // Labels for the ykeys -- will be displayed when you hover over the
     // chart.
-    labels: ['first week audience','expectation', 'percent_error', 'preview'],
+    labels: ['view_count'],
 
-    hoverCallback: ['title_en'],
+    hoverCallback: ['title'],
+  });
+
+  new Morris.Bar({
+    element: 'todays_keyword',
+    data: [
+      { keyword: '하이트', a: 21/410},
+      { keyword: '케이스위스', a: 17/410},
+      { keyword: '렌즈나인', a: 16/410},
+      { keyword: '멕시카나', a: 15/410},
+      { keyword: '이니스프리', a: 15/410},
+      { keyword: '스노우', a: 14/410},
+      { keyword: '화장품', a: 14/410},
+      { keyword: '교복', a: 14/410},
+      { keyword: '삼성페이', a: 13/410},
+      { keyword: '상어', a: 8/410},
+      { keyword: '에너제틱', a: 8/410},
+    ],
+    xkey: 'keyword',
+    ykeys: ['a'],
+    labels: ['%']
   });
 </script>

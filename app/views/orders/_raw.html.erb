@@ -1,0 +1,16 @@
+<table id="products">
+  <tr>
+    <th>date</th>
+    <th>title</th>
+    <th>content</th>
+    <th>username</th>
+  </tr>
+  <% @products.each do |product| %>
+      <tr>
+        <td><%= product.date %></td>
+        <td><%= product.title %></td>
+        <td><%= product.content %></td>
+        <td><%= product.username %></td>
+      </tr>
+  <% end %>
+</table>

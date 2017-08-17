@@ -1,8 +1,6 @@
 class Product < ApplicationRecord
   belongs_to :order
 
-  # for updating, downloading csv
-
   def self.to_csv(options = {})
     CSV.generate(options) do |csv|
       csv << column_names
