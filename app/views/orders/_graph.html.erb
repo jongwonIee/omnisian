@@ -3,9 +3,14 @@
 <script src="//cdnjs.cloudflare.com/ajax/libs/raphael/2.1.0/raphael-min.js"></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/morris.js/0.5.1/morris.min.js"></script>
 
-<%= content_tag :div, '', id: 'products_chart', data: {products: @products} %>
-<%= content_tag :div, '', id: 'todays_keyword' %>
-
+<div class="graph-div">
+  <p class="sub-small-title">데이터 변화량</p>
+  <%= content_tag :div, '', id: 'products_chart', data: {products: @products} %>
+</div>
+<div>
+  <p class="sub-small-title">오늘의 키워드</p>
+  <%= content_tag :div, '', id: 'todays_keyword' %>
+</div>
 <script>
   new Morris.Line({
     // ID of the element in which to draw the chart.
