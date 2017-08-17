@@ -1,7 +1,9 @@
-<br>
+<br><br><br><br><br><br>
 Order List
 <br>
 <% @orders.each do |o| %>
     <%= link_to 'link', (order_path(o.id)) %>
-    purchased at <%= o.created_at %><br>
+    키워드: <%= o.keyword %>|
+    기간: <%= o.length %>|
+    구매시간: <%= o.created_at %><br>
 <% end %>
