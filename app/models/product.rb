@@ -1,4 +1,5 @@
 class Product < ApplicationRecord
+  belongs_to :order
 
   # for updating, downloading csv
 

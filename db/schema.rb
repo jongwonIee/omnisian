@@ -24,6 +24,7 @@ ActiveRecord::Schema.define(version: 20170815102800) do
   end
 
   create_table "products", force: :cascade do |t|
+    t.integer  "order_id"
     t.string   "name"
     t.string   "date"
     t.string   "title"

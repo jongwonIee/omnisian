@@ -1,0 +1,14 @@
+<br>
+Mypage
+<br>
+<% @orders.each do |o| %>
+    purchased at <%= o.created_at %><br>
+    <%= o.products.each do |p| %>
+
+    <% end %>
+<% end %>
+
+
+<%= render 'import' %>
+<%= render 'download' %>
+<%= render 'graph' %>3

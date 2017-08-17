@@ -1,5 +1,6 @@
 class OrdersController < ApplicationController
   def index
+    @orders = Order.where(user_id: current_user.id)
   end
 
   def show
@@ -14,7 +15,7 @@ class OrdersController < ApplicationController
     order.user = current_user
     order.save
 
-    redirect_to users_path
+    redirect_to orders_path
   end
 
   private
