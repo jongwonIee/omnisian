@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
-  root to: 'orders#index'
+  root to: 'home#index'
 
+  get 'home/index'
   resources :orders
   resources :users
   resources :sessions

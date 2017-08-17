@@ -4,6 +4,7 @@ class OrdersController < ApplicationController
   end
 
   def show
+    @products = Order.find(params[:id]).products
   end
 
   def new
