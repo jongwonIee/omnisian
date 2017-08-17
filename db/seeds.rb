@@ -5,6 +5,13 @@ puts "Inserting user data.."
   User.create(id: x[0], email: x[1], password: x[2])
 end
 
+puts "Inserting order data.."
+[
+    [1, 1, 1, 1, 1, 1, "소녀전선"]
+].each do |x|
+  Order.create(id: x[0], user_id: x[1], length: x[2], navercafe: x[3], dcinside: x[4], twitter: x[5], keyword: x[6])
+end
+
 puts "Inserting products data.."
 File.read("db/seed_data/products.csv").split("\n").each do |line|
   data = line.strip.split(",")
@@ -19,8 +26,8 @@ File.read("db/seed_data/products.csv").split("\n").each do |line|
       index: data[7],
       category: data[8],
       reply_count: data[9],
-      view_count: data[10],
-      like_count: data[11],
+      like_count: data[10],
+      view_count: data[11],
       link: data[12]
   )
 end

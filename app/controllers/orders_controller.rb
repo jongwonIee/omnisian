@@ -5,6 +5,12 @@ class OrdersController < ApplicationController
 
   def show
     @products = Order.find(params[:id]).products
+    respond_to do |format|
+      format.html
+      # format.csv { render text: @products.to_csv} # render at page
+      format.csv { send_data @products.to_csv, filename: 'products.csv'}
+      format.xls # { send_data @products.to_csv(col_sep: "\t") }
+    end
   end
 
   def new
@@ -18,6 +24,12 @@ class OrdersController < ApplicationController
 
     redirect_to orders_path
   end
+
+  def import
+    Product.import(params[:file])
+    redirect_to root_url, notice: "Products imported."
+  end
+
 
   private
 
