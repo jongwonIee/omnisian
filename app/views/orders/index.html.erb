@@ -1,9 +1,32 @@
-<br><br><br><br><br><br>
-Order List
-<br>
-<% @orders.each do |o| %>
-    <%= link_to 'link', (order_path(o.id)) %>
-    키워드: <%= o.keyword %>|
-    기간: <%= o.length %>|
-    구매시간: <%= o.created_at %><br>
-<% end %>
+<div id="particles-js"></div>
+
+<div class="orders-div">
+  <div class="orders-inside-div">
+    <div class="orders-content-div">
+      <p class="sub-small-title">Your Orders</p>
+      <table class="table" id="products">
+        <thead class="thead-inverse">
+          <tr>
+            <th>키워드</th>
+            <th>기간</th>
+            <th>구매시간</th>
+            <th>링크</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% @orders.each do |o| %>
+            <tr>
+              <td><%= o.keyword %></td>
+              <td><%= o.length %></td>
+              <td><%= o.created_at %></td>
+              <td><%= link_to 'link', (order_path(o.id)) %></td>
+            </tr>
+          <% end %>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+
+<%= javascript_include_tag("particles.min.js") %>
+<%= javascript_include_tag("index.js") %>

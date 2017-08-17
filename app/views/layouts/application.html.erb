@@ -27,12 +27,12 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
           <div class="navbar-nav custom-navbar-nav-attr">
-            <a class="nav-item nav-link custom-nav-item-attr" href="/orders/new">주문하기</a>
             <% if current_user %>
-                <a class="nav-item nav-link custom-nav-item-attr" href="/orders/<%=current_user.id%>">MyPage</a>
-                <a class="nav-item nav-link custom-nav-item-attr" href="/logout">Logout</a>
+                <a class="nav-item nav-link custom-nav-item-attr" href="/orders/new">주문하기</a>
+                <a class="nav-item nav-link custom-nav-item-attr" href="/orders">주문내역</a>
+                <a class="nav-item nav-link custom-nav-item-attr" href="/logout">로그아웃</a>
             <% else %>
-                <a class="nav-item nav-link custom-nav-item-attr" href="/sessions/new">Login</a>
+                <a class="nav-item nav-link custom-nav-item-attr" href="/sessions/new">로그인</a>
             <% end %>
           </div>
         </div>
