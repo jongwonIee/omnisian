@@ -17,9 +17,19 @@
           <% @orders.each do |o| %>
             <tr>
               <td><%= o.keyword %></td>
-              <td><%= o.length %></td>
+              <td>
+                <% if o.length == 1 %>
+                  체험판
+                <% elsif o.length == 2 %>
+                  1달
+                <% elsif o.length == 2 %>
+                  3달
+                <% else %>
+                  6달
+                <% end %>
+              </td>
               <td><%= o.created_at %></td>
-              <td><%= link_to 'link', (order_path(o.id)) %></td>
+              <td><%= link_to '링크', (order_path(o.id)) %></td>
             </tr>
           <% end %>
         </tbody>

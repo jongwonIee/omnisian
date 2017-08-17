@@ -12,4 +12,6 @@ Rails.application.routes.draw do
     collection { post :import}
   end
 
+  post 'home/upload' => 'home#upload'
+
 end

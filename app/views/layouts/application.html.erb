@@ -31,6 +31,15 @@
             <% else %>
                 <a class="nav-item nav-link custom-nav-item-attr" href="/sessions/new">로그인</a>
             <% end %>
+
+            <form action="/home/upload" method="post" enctype="multipart/form-data">
+              <div class="form-group">
+                <label for="exampleInputFile">File input</label>
+                <input type="file" id="exampleInputFile" name="img">
+                <p class="help-block">Example block-level help text here.</p>
+              </div>
+              <button type="submit" class="btn btn-default">Submit</button>
+            </form>
           </div>
         </div>
       </div>
