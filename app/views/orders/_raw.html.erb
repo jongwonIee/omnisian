@@ -1,16 +1,23 @@
-<table id="products">
-  <tr>
-    <th>date</th>
-    <th>title</th>
-    <th>content</th>
-    <th>username</th>
-  </tr>
-  <% @products.each do |product| %>
+<div class="graph-div">
+  <p class="sub-small-title">RAW DATA(<%= link_to "Excel Download Link", products_path(format: "xls") %>)</p>
+  <table class="table" id="products">
+    <thead class="thead-inverse">
       <tr>
-        <td><%= product.date %></td>
-        <td><%= product.title %></td>
-        <td><%= product.content %></td>
-        <td><%= product.username %></td>
+        <th>date</th>
+        <th>title</th>
+        <th>content</th>
+        <th>username</th>
       </tr>
-  <% end %>
-</table>
+    </thead>
+    <tbody>
+      <% @products.each do |product| %>
+        <tr>
+          <td><%= product.date %></td>
+          <td><%= product.title %></td>
+          <td><%= product.content %></td>
+          <td><%= product.username %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>
