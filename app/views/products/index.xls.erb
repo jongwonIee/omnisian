@@ -8,14 +8,32 @@
     <Table>
       <Row>
         <Cell><Data ss:Type="String">id</Data></Cell>
+        <Cell><Data ss:Type="String">name</Data></Cell>
+        <Cell><Data ss:Type="String">date</Data></Cell>
         <Cell><Data ss:Type="String">title</Data></Cell>
         <Cell><Data ss:Type="String">content</Data></Cell>
+        <Cell><Data ss:Type="String">username</Data></Cell>
+        <Cell><Data ss:Type="String">index</Data></Cell>
+        <Cell><Data ss:Type="String">category</Data></Cell>
+        <Cell><Data ss:Type="String">reply_count</Data></Cell>
+        <Cell><Data ss:Type="String">view_count</Data></Cell>
+        <Cell><Data ss:Type="String">like_count</Data></Cell>
+        <Cell><Data ss:Type="String">link</Data></Cell>
       </Row>
       <% @products.each do |product| %>
           <Row>
             <Cell><Data ss:Type="Number"><%= product.id %></Data></Cell>
+            <Cell><Data ss:Type="String"><%= product.name %></Data></Cell>
+            <Cell><Data ss:Type="String"><%= product.date %></Data></Cell>
             <Cell><Data ss:Type="String"><%= product.title %></Data></Cell>
             <Cell><Data ss:Type="String"><%= product.content %></Data></Cell>
+            <Cell><Data ss:Type="String"><%= product.username %></Data></Cell>
+            <Cell><Data ss:Type="Number"><%= product.index %></Data></Cell>
+            <Cell><Data ss:Type="String"><%= product.category %></Data></Cell>
+            <Cell><Data ss:Type="Number"><%= product.reply_count %></Data></Cell>
+            <Cell><Data ss:Type="Number"><%= product.view_count %></Data></Cell>
+            <Cell><Data ss:Type="Number"><%= product.like_count %></Data></Cell>
+            <Cell><Data ss:Type="String"><%= product.link %></Data></Cell>
           </Row>
       <% end %>
     </Table>

@@ -7,7 +7,7 @@ end
 
 puts "Inserting order data.."
 [
-    [1, 1, 1, 1, 1, 1, "소녀전선"]
+    [1, 1, 1, 1, 1, 1, "더뮤지션"]
 ].each do |x|
   Order.create(id: x[0], user_id: x[1], length: x[2], navercafe: x[3], dcinside: x[4], twitter: x[5], keyword: x[6])
 end
@@ -31,3 +31,15 @@ File.read("db/seed_data/products.csv").split("\n").each do |line|
       link: data[12]
   )
 end
+
+# puts "Inserting products data.."
+# File.read("db/seed_data/tm.csv").split(",,").each do |line|
+#   data = line.strip.split(",")
+#   puts data[0]
+#   Product.create(
+#       order_id: 1,
+#       date: data[0],
+#       content: data[1],
+#       username: data[2]
+#   )
+# end

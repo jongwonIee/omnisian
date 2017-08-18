@@ -13,5 +13,6 @@ Rails.application.routes.draw do
   end
 
   post 'home/upload' => 'home#upload'
-
+  post '/seed' => 'home#seed'
+  get 'home/admin'
 end
