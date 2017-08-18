@@ -8,7 +8,7 @@ class OrdersController < ApplicationController
     respond_to do |format|
       format.html
       # format.csv { render text: @products.to_csv} # render at page
-      format.csv { send_data @products.to_csv, filename: 'products.csv'}
+      format.csv { send_data @products.to_csv, filename: 'tm_tweet_0814.csv'}
       format.xls # { send_data @products.to_csv(col_sep: "\t") }
     end
   end
