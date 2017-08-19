@@ -3,7 +3,6 @@ class CreateProducts < ActiveRecord::Migration[5.0]
     create_table :products do |t|
 
       t.integer :order_id
-
       t.string :name
       t.string :date
       t.string :title
@@ -14,6 +13,7 @@ class CreateProducts < ActiveRecord::Migration[5.0]
       t.integer :reply_count
       t.integer :view_count
       t.integer :like_count
+      t.string :note
       t.string :link
 
       t.timestamps

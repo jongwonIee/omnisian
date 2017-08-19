@@ -43,6 +43,7 @@ ActiveRecord::Schema.define(version: 20170817170536) do
     t.integer  "reply_count"
     t.integer  "view_count"
     t.integer  "like_count"
+    t.string   "note"
     t.string   "link"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
