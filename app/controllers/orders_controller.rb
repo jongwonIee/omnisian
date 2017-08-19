@@ -21,7 +21,6 @@ class OrdersController < ApplicationController
     order = Order.new(order_params)
     order.user = current_user
     order.save
-
     redirect_to orders_path
   end
 

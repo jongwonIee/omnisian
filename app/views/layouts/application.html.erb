@@ -32,7 +32,7 @@
               <a class="nav-item nav-link custom-nav-item-attr" href="/sessions/new">로그인</a>
           <% end %>
 
-          <form action="/home/upload" method="post" enctype="multipart/form-data">
+          <form action="/image/img_upload" method="post" enctype="multipart/form-data">
             <div class="form-group">
               <label for="exampleInputFile">File input</label>
               <input type="file" id="exampleInputFile" name="img">
@@ -40,8 +40,8 @@
             </div>
             <button type="submit" class="btn btn-default">Submit</button>
           </form>
-          <% unless @@img_url.nil? %>
-              <img src="<%= @@img_url %>">
+          <% unless $img_url.nil? %>
+              <img src="<%= $img_url %>">
           <% end %>
         </div>
       </div>

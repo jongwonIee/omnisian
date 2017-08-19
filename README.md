@@ -1,24 +1,7 @@
-# README
+# omnisian 서비스 입니다.
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+- 이종원(성균관대학교)
+- 채민균(인하대학교)
+- 한 정(인하대학교)
+ 
+ 자세한 내용은 Omnisian.pdf 파일을 참고해주세요 
