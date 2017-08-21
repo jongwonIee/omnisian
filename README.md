@@ -9,5 +9,5 @@
   
 - 아래는 멋쟁이사자처럼5기 해커톤(17.08.18 ~ 17.08.19) 시상식때 수상작들 발표장면 입니다.
   
-  Aws Power User Top3
+- [Aws Power User Top3]
   ![prize](./prize.jpeg)
